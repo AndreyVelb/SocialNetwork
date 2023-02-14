@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: cassandra:4.0
+    restart: always
+    ports:
+      - 9042:9042
+    environment:
+      - CASSANDRA_CLUSTER_NAME=social_network

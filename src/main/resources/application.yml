@@ -1,0 +1,30 @@
+spring:
+  cassandra:
+    contact-points: 127.0.0.1
+    port: 9042
+    local-datacenter: datacenter1
+    keyspace-name: social_network
+    password:
+    username:
+    schema-action: CREATE_IF_NOT_EXISTS
+    request:
+      timeout: 10000
+    connection:
+      connect-timeout: 10000
+      init-query-timeout: 10000
+
+#  liquibase:
+#    change-log: /db/changelog/db.changelog-master.xml
+
+http:
+  url:
+    version: /api/v1/
+
+app:
+  basket:
+    yandex-disk:
+      o-auth-token: y0_AgAAAABb0zv4AADLWwAAAADbZKFtChuyTDRaSue4bB1ew3ACqBF5Wt4
+      host: https://cloud-api.yandex.net/v1/disk/resources
+      upload-host: https://cloud-api.yandex.net/v1/disk/resources/upload?path=
+      download-link-host: https://cloud-api.yandex.net/v1/disk/resources/download?path=
+
